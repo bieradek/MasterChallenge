@@ -1,5 +1,7 @@
 package com.timbuchalka;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -32,5 +34,30 @@ public class Main {
         // For the two additional classes this may require you to be looking at the base class for pricing and then
         // adding totals to final price.
 
+        System.out.println("Welcome to Bills Burgers. Press any key to view the menu");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+//        String input = "menu";
+//        scanner.next(input.toLowerCase());
+        System.out.println("********************BILLS BURGERS MENU********************"
+                + "\n" + "1.Hamburger"
+                + "\n" + "2.Healthy Burger"
+                + "\n" + "3.Deluxe Hamburger"
+                + "\n" + "Please enter the number to view details of the burger");
+        switch (scanner.nextInt()) {
+            case 1:
+                System.out.println("Viewing details of Hamburger");
+                break;
+            case 2:
+                System.out.println("Viewing details of Healthy Burger");
+                break;
+            case 3:
+                System.out.println("Viewing details of Deluxe Hamburger");
+                break;
+            default:
+                System.out.println("Incorrect number");
+                break;
+
+        }
     }
 }
