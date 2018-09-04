@@ -72,7 +72,6 @@ public class Main {
             default:
                 System.out.println("Incorrect number");
                 break;
-
         }
     }
 }
