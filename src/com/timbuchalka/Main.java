@@ -53,7 +53,7 @@ public class Main {
 
         System.out.println("Welcome to Bills Burgers. Please tell us your name. We will call you once your meal is ready");
         Scanner scanner = new Scanner(System.in);
-        String customerName = scanner.nextLine();
+        Customer customer = new Customer(((int) (Math.random() * 100) + 1), scanner.nextLine());
         System.out.println("********************BILLS BURGERS MENU********************"
                 + "\n" + "1.Hamburger"
                 + "\n" + "2.Healthy Burger"

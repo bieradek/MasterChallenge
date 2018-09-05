@@ -8,4 +8,20 @@ public class Customer {
         this.customerID = customerID;
         this.name = name;
     }
+
+    public int getCustomerID() {
+        return customerID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
