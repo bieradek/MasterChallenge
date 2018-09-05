@@ -12,6 +12,18 @@ public class Burger {
     private String pickle;
     private String onion;
 
+    public String getName() {
+        return name;
+    }
+
+    public String getBreadRollType() {
+        return breadRollType;
+    }
+
+    public String getMeat() {
+        return meat;
+    }
+
     public void setLettuce(String lettuce) {
         this.lettuce = lettuce;
     }

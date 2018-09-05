@@ -49,11 +49,11 @@ public class Main {
         // For the two additional classes this may require you to be looking at the base class for pricing and then
         // adding totals to final price.
 
-        System.out.println("Welcome to Bills Burgers. Press any key to view the menu");
+        //initializing all the burgers
+
+        System.out.println("Welcome to Bills Burgers. Please tell us your name. We will call you once your meal is ready");
         Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
-//        String input = "menu";
-//        scanner.next(input.toLowerCase());
+        String customerName = scanner.nextLine();
         System.out.println("********************BILLS BURGERS MENU********************"
                 + "\n" + "1.Hamburger"
                 + "\n" + "2.Healthy Burger"
@@ -61,7 +61,11 @@ public class Main {
                 + "\n" + "Please enter the number to view details of the burger");
         switch (scanner.nextInt()) {
             case 1:
-                System.out.println("Viewing details of Hamburger");
+                Burger burger = new Burger("Hamburger", "white", "well-done");
+                System.out.println("Viewing details of Hamburger:" +
+                        "\n" + "The name of your order is: " + burger.getName() +
+                        "\n" + "The " + burger.getName() + " has " + burger.getBreadRollType() + " type of bread roll and" +
+                        "\n" + "the meat is cooked " + burger.getMeat());
                 break;
             case 2:
                 System.out.println("Viewing details of Healthy Burger");
