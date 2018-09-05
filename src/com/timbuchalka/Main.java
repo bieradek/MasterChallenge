@@ -11,17 +11,18 @@ public class Main {
         // be added to the burgers and pricing.
         // We want to create a base hamburger, but also two other types of hamburgers that are popular ones in Bills store.
 
-
         // The basic hamburger should have the following items.
         // name
         // Bread roll type,
         // meat
         // price
         // and up to 4 additional additions (things like lettuce, tomato, carrot, etc)
-
         // that the customer can select to be added to the burger.
+
         // Each one of these items gets charged an additional price so you need some way to track how many items got added
         // and to calculate the final price (base burger with all the additions).
+
+        //each addition is 0.25$
 
         // This burger has a base price and the additions are all separately priced (up to 4 additions, see above).
 
@@ -65,7 +66,8 @@ public class Main {
                 System.out.println("Viewing details of Hamburger:" +
                         "\n" + "The name of your order is: " + burger.getName() +
                         "\n" + "The " + burger.getName() + " has " + burger.getBreadRollType() + " type of bread roll and" +
-                        "\n" + "the meat is cooked " + burger.getMeat());
+                        "\n" + "the meat is cooked " + burger.getMeat() +
+                        "\n" + "The burger has a base price of " + burger.getBasePrice());
                 break;
             case 2:
                 System.out.println("Viewing details of Healthy Burger");

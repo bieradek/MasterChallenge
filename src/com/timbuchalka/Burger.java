@@ -1,11 +1,10 @@
 package com.timbuchalka;
 
 public class Burger {
-    //base burger
     private String name;
     private String breadRollType;
     private String meat;
-    private double price;
+    private double basePrice;
 
     private String lettuce;
     private String tomato;
@@ -22,6 +21,10 @@ public class Burger {
 
     public String getMeat() {
         return meat;
+    }
+
+    public double getBasePrice() {
+        return basePrice;
     }
 
     public void setLettuce(String lettuce) {
@@ -44,10 +47,9 @@ public class Burger {
         this.name = name;
         this.breadRollType = breadRollType;
         this.meat = meat;
-        this.price = 20;
+        this.basePrice = 5.0;
     }
 }
-
 
 class HealthyBurger extends Burger {
     private String lettuce;
