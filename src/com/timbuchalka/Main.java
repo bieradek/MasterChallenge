@@ -49,7 +49,24 @@ public class Main {
         // For the two additional classes this may require you to be looking at the base class for pricing and then
         // adding totals to final price.
 
-        //initializing all the burgers
+        Burger baseBurger = new Burger("well-done");
+        Burger healthyBurger = new HealthyBurger("medium-rare");
+        Burger deluxeBurger = new DeluxeBurger("rare", "Lays", "Coca-Cola");
+
+        System.out.println(healthyBurger.getTomato());
+        System.out.println(healthyBurger.getName());
+        System.out.println(healthyBurger.getBreadRollType());
+        System.out.println(healthyBurger.getLettuce());
+        System.out.println(healthyBurger.getOnion());
+        System.out.println(healthyBurger.getPickle());
+        System.out.println(healthyBurger.totalPrice());
+        healthyBurger.addOnion(2);
+        System.out.println(healthyBurger.totalPrice());
+        System.out.println(deluxeBurger.totalPrice());
+
+    }
+}
+
 
 //        System.out.println("Welcome to Bills Burgers. Please tell us your name. We will call you once your meal is ready");
 //        Scanner scanner = new Scanner(System.in);
@@ -88,12 +105,3 @@ public class Main {
 //            default:
 //                System.out.println("Incorrect number. Please provide valid input.");
 //        }
-        Burger burger = new Burger("rare");
-        HealthyBurger healthyBurger = new HealthyBurger("well-done");
-        DeluxeBurger deluxeBurger = new DeluxeBurger("medium", "Lays", "Coca-cola");
-
-        System.out.println(burger.totalPrice());
-        System.out.println(healthyBurger.totalPrice());
-        System.out.println(deluxeBurger.totalPrice());
-    }
-}

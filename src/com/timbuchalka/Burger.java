@@ -11,6 +11,8 @@ public class Burger {
     private int pickle;
     private int onion;
 
+    private int additionCounter = 0;
+
     public Burger(String name, String breadRollType, String cooked, double basePrice, int lettuce, int tomato, int pickle, int onion) {
         this.name = name;
         this.breadRollType = breadRollType;
@@ -30,19 +32,29 @@ public class Burger {
     }
 
     public double totalPrice() {
-        return this.basePrice + ((0.25) * (this.lettuce + this.tomato + this.pickle + this.onion));
+        return this.basePrice;// + ((0.25) * (this.lettuce + this.tomato + this.pickle + this.onion));
     }
 
+//    public void checkout() {
+//        System.out.println("");
+//    }
+
     public void addTomato(int tomato) {
-        this.tomato = this.tomato + 1;
+        this.tomato = this.tomato + tomato;
+        this.basePrice = this.basePrice + tomato * 0.25;
+        this.additionCounter = this.additionCounter + tomato;
     }
 
     public void addPickle(int pickle) {
-        this.pickle = this.pickle + 1;
+        this.pickle = this.pickle + pickle;
+        this.basePrice = this.basePrice + pickle * 0.25;
+        this.additionCounter = this.additionCounter + pickle;
     }
 
     public void addOnion(int onion) {
-        this.onion = this.onion + 1;
+        this.onion = this.onion + onion;
+        this.basePrice = this.basePrice + onion * 0.25;
+        this.additionCounter = this.additionCounter + onion;
     }
 
     public String getName() {
