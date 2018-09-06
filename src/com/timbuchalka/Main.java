@@ -25,7 +25,6 @@ public class Main {
         //each addition is 0.25$
 
         // This burger has a base price and the additions are all separately priced (up to 4 additions, see above).
-
         // Create a Hamburger class to deal with all the above.
         // The constructor should only include the roll type, meat and price, can also include name of burger or you
         // can use a setter.
@@ -82,7 +81,7 @@ public class Main {
                         "\n" + "The burger has a base price of " + healthyBurger.getBasePrice());
                 break;
             case 3:
-                DeluxeBurger deluxeBurger = new DeluxeBurger("Deluxe Burger", "well-done");
+                DeluxeBurger deluxeBurger = new DeluxeBurger("well-done");
                 System.out.println("The " + deluxeBurger.getName() + " has " + deluxeBurger.getBreadRollType() + " type of bread roll and" +
                         "\n" + "the meat is cooked " + deluxeBurger.getCooked() + " by default." +
                         "\n" + "The burger has a base price of " + deluxeBurger.getBasePrice());
