@@ -70,11 +70,20 @@ public class Main {
                         "\n" + "The burger has a base price of " + burger.getBasePrice());
                 break;
             case 2:
-                System.out.println("Viewing details of Healthy Burger");
+                HealthyBurger healthyBurger = new HealthyBurger("Healthy Burger", "brown", "well-done");
+                System.out.println("Viewing details of Hamburger:" +
+                        "\n" + "The name of your order is: " + healthyBurger.getName() +
+                        "\n" + "The " + healthyBurger.getName() + " has " + healthyBurger.getBreadRollType() + " type of bread roll and" +
+                        "\n" + "the meat is cooked " + healthyBurger.getMeat() +
+                        "\n" + "The burger has a base price of " + healthyBurger.getBasePrice());
                 break;
             case 3:
-                System.out.println("Viewing details of Deluxe Hamburger");
-                break;
+                DeluxeBurger deluxeBurger = new DeluxeBurger("Deluxe Burger", "white", "well-done");
+                System.out.println("Viewing details of Hamburger:" +
+                        "\n" + "The name of your order is: " + deluxeBurger.getName() +
+                        "\n" + "The " + deluxeBurger.getName() + " has " + deluxeBurger.getBreadRollType() + " type of bread roll and" +
+                        "\n" + "the meat is cooked " + deluxeBurger.getMeat() +
+                        "\n" + "The burger has a base price of " + deluxeBurger.getBasePrice());
             default:
                 System.out.println("Incorrect number");
                 break;
