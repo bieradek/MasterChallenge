@@ -3,7 +3,7 @@ package com.timbuchalka;
 public class Burger {
     private String name;
     private String breadRollType;
-    private String meat;
+    private String cooked;
     private double basePrice;
 
     public String getName() {
@@ -14,18 +14,18 @@ public class Burger {
         return breadRollType;
     }
 
-    public String getMeat() {
-        return meat;
+    public String getCooked() {
+        return cooked;
     }
 
     public double getBasePrice() {
         return basePrice;
     }
 
-    public Burger(String name, String breadRollType, String meat) {
+    public Burger(String name, String cooked) {
         this.name = name;
-        this.breadRollType = breadRollType;
-        this.meat = meat;
+        this.breadRollType = "white";
+        this.cooked = cooked;
         this.basePrice = 5.0;
     }
 }

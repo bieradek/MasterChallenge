@@ -62,31 +62,24 @@ public class Main {
                 + "\n" + "Please enter the number to view details of the burger");
         switch (scanner.nextInt()) {
             case 1:
-                Burger burger = new Burger("Hamburger", "white", "well-done");
-                System.out.println("Viewing details of Hamburger:" +
-                        "\n" + "The name of your order is: " + burger.getName() +
-                        "\n" + "The " + burger.getName() + " has " + burger.getBreadRollType() + " type of bread roll and" +
-                        "\n" + "the meat is cooked " + burger.getMeat() +
+                Burger burger = new Burger("Hamburger", "well-done");
+                System.out.println("The " + burger.getName() + " has " + burger.getBreadRollType() + " type of bread roll and" +
+                        "\n" + "the meat is cooked " + burger.getCooked() + " by default." +
                         "\n" + "The burger has a base price of " + burger.getBasePrice());
                 break;
             case 2:
                 HealthyBurger healthyBurger = new HealthyBurger("Healthy Burger", "brown", "well-done");
-                System.out.println("Viewing details of Hamburger:" +
-                        "\n" + "The name of your order is: " + healthyBurger.getName() +
-                        "\n" + "The " + healthyBurger.getName() + " has " + healthyBurger.getBreadRollType() + " type of bread roll and" +
-                        "\n" + "the meat is cooked " + healthyBurger.getMeat() +
+                System.out.println("The " + healthyBurger.getName() + " has " + healthyBurger.getBreadRollType() + " type of bread roll and" +
+                        "\n" + "the meat is cooked " + healthyBurger.getCooked() + " by default." +
                         "\n" + "The burger has a base price of " + healthyBurger.getBasePrice());
                 break;
             case 3:
                 DeluxeBurger deluxeBurger = new DeluxeBurger("Deluxe Burger", "white", "well-done");
-                System.out.println("Viewing details of Hamburger:" +
-                        "\n" + "The name of your order is: " + deluxeBurger.getName() +
-                        "\n" + "The " + deluxeBurger.getName() + " has " + deluxeBurger.getBreadRollType() + " type of bread roll and" +
-                        "\n" + "the meat is cooked " + deluxeBurger.getMeat() +
+                System.out.println("The " + deluxeBurger.getName() + " has " + deluxeBurger.getBreadRollType() + " type of bread roll and" +
+                        "\n" + "the meat is cooked " + deluxeBurger.getCooked() + " by default." +
                         "\n" + "The burger has a base price of " + deluxeBurger.getBasePrice());
             default:
-                System.out.println("Incorrect number");
-                break;
+                System.out.println("Incorrect number. Please provide valid input.");
         }
     }
 }
