@@ -11,17 +11,39 @@ public class Burger {
     private int pickle;
     private int onion;
 
-    public Burger(String name, String breadRollType, String cooked, double basePrice) {
+    public Burger(String name, String breadRollType, String cooked, double basePrice, int lettuce, int tomato, int pickle, int onion) {
         this.name = name;
         this.breadRollType = breadRollType;
         this.cooked = cooked;
         this.basePrice = basePrice;
+        this.lettuce = lettuce;
+        this.tomato = tomato;
+        this.pickle = pickle;
+        this.onion = onion;
+    }
+
+    public Burger(String cooked) { //constructor for a base burger
+        this.name = "Hamburger";
+        this.breadRollType = "white";
+        this.cooked = cooked;
+        this.basePrice = 5;
     }
 
     public double totalPrice() {
         return this.basePrice + ((0.25) * (this.lettuce + this.tomato + this.pickle + this.onion));
     }
 
+    public void addTomato(int tomato) {
+        this.tomato = this.tomato + 1;
+    }
+
+    public void addPickle(int pickle) {
+        this.pickle = this.pickle + 1;
+    }
+
+    public void addOnion(int onion) {
+        this.onion = this.onion + 1;
+    }
 
     public String getName() {
         return name;
