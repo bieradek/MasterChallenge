@@ -18,6 +18,10 @@ public class Burger {
         this.basePrice = basePrice;
     }
 
+    public double totalPrice() {
+        return this.basePrice + ((0.25) * (this.lettuce + this.tomato + this.pickle + this.onion));
+    }
+
 
     public String getName() {
         return name;
