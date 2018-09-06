@@ -88,10 +88,12 @@ public class Main {
 //            default:
 //                System.out.println("Incorrect number. Please provide valid input.");
 //        }
-        Burger burger = new Burger();
-        HealthyBurger healthyBurger = new HealthyBurger();
-        DeluxeBurger deluxeBurger = new DeluxeBurger();
+        Burger burger = new Burger("rare");
+        HealthyBurger healthyBurger = new HealthyBurger("well-done");
+        DeluxeBurger deluxeBurger = new DeluxeBurger("medium", "Lays", "Coca-cola");
 
+        System.out.println(burger.totalPrice());
         System.out.println(healthyBurger.totalPrice());
+        System.out.println(deluxeBurger.totalPrice());
     }
 }
