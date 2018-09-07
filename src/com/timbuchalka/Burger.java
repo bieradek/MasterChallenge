@@ -85,8 +85,28 @@ public class Burger {
     }
 
     public void addAddition(int quantity, String additionName) {
-        switch(additionName){
-
+        if (additionCounter < additionLimit) {
+            switch (additionName) {
+                case "onion":
+                    this.onion += quantity;
+                    additionCounter++;
+                    break;
+                case "pickle":
+                    this.pickle += quantity;
+                    additionCounter++;
+                    break;
+                case "tomato":
+                    this.tomato += quantity;
+                    additionCounter++;
+                    break;
+                case "lettuce":
+                    this.lettuce += quantity;
+                    additionCounter++;
+                    break;
+                default:
+                    System.out.println("Unknown type");
+                    break;
+            }
         }
     }
 
