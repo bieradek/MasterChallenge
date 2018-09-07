@@ -5,7 +5,7 @@ public class DeluxeBurger extends Burger {
     private String drinks; //cola,pepsi etc
 
     public DeluxeBurger(String cooked, String chips, String drinks) {
-        super("Deluxe", "white", cooked, 10, 0, 0, 0, 0);
+        super("Deluxe", "white", cooked, 10, 1, 1, 1, 1, 0);
         this.chips = chips;
         this.drinks = drinks;
     }

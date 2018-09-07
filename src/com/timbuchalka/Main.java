@@ -59,14 +59,9 @@ public class Main {
         System.out.println(healthyBurger.getLettuce());
         System.out.println(healthyBurger.getOnion());
         System.out.println(healthyBurger.getPickle());
-        System.out.println(healthyBurger.totalPrice());
         healthyBurger.addOnion(2);
-        System.out.println(healthyBurger.totalPrice());
-        System.out.println(deluxeBurger.totalPrice());
-
     }
 }
-
 
 //        System.out.println("Welcome to Bills Burgers. Please tell us your name. We will call you once your meal is ready");
 //        Scanner scanner = new Scanner(System.in);

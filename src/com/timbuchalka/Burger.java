@@ -5,15 +5,24 @@ public class Burger {
     private String breadRollType;
     private String cooked;
     private double basePrice;
-
     private int lettuce;
     private int tomato;
     private int pickle;
     private int onion;
+    private int additionLimit = 4;
 
-    private int additionCounter = 0;
+    public Burger(String cooked) {
+        this.name = "Hamburger";
+        this.breadRollType = "white";
+        this.cooked = cooked;
+        this.basePrice = 5;
+        this.lettuce = 0;
+        this.tomato = 0;
+        this.pickle = 0;
+        this.onion = 0;
+    }
 
-    public Burger(String name, String breadRollType, String cooked, double basePrice, int lettuce, int tomato, int pickle, int onion) {
+    public Burger(String name, String breadRollType, String cooked, double basePrice, int lettuce, int tomato, int pickle, int onion, int additionLimit) {
         this.name = name;
         this.breadRollType = breadRollType;
         this.cooked = cooked;
@@ -22,39 +31,27 @@ public class Burger {
         this.tomato = tomato;
         this.pickle = pickle;
         this.onion = onion;
+        this.additionLimit = additionLimit;
     }
-
-    public Burger(String cooked) { //constructor for a base burger
-        this.name = "Hamburger";
-        this.breadRollType = "white";
-        this.cooked = cooked;
-        this.basePrice = 5;
-    }
-
-    public double totalPrice() {
-        return this.basePrice;// + ((0.25) * (this.lettuce + this.tomato + this.pickle + this.onion));
-    }
-
-//    public void checkout() {
-//        System.out.println("");
-//    }
 
     public void addTomato(int tomato) {
         this.tomato = this.tomato + tomato;
         this.basePrice = this.basePrice + tomato * 0.25;
-        this.additionCounter = this.additionCounter + tomato;
     }
 
     public void addPickle(int pickle) {
         this.pickle = this.pickle + pickle;
         this.basePrice = this.basePrice + pickle * 0.25;
-        this.additionCounter = this.additionCounter + pickle;
     }
 
     public void addOnion(int onion) {
         this.onion = this.onion + onion;
         this.basePrice = this.basePrice + onion * 0.25;
-        this.additionCounter = this.additionCounter + onion;
+    }
+
+    public void addLettuce(int lettuce) {
+        this.lettuce = this.lettuce + lettuce;
+        this.basePrice = this.basePrice + lettuce * 0.25;
     }
 
     public String getName() {
