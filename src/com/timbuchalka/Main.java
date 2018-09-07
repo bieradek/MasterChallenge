@@ -53,13 +53,37 @@ public class Main {
         Burger healthyBurger = new HealthyBurger("medium-rare");
         Burger deluxeBurger = new DeluxeBurger("rare", "Lays", "Coca-Cola");
 
-        System.out.println(healthyBurger.getTomato());
+        System.out.println("*************************************");
+        System.out.println(baseBurger.getName());
+        System.out.println(baseBurger.getAdditionLimit());
+        System.out.println(baseBurger.getBasePrice());
+        System.out.println(baseBurger.getBreadRollType());
+        System.out.println(baseBurger.getCooked());
+        System.out.println(baseBurger.getLettuce());
+        System.out.println(baseBurger.getOnion());
+        System.out.println(baseBurger.getPickle());
+        System.out.println(baseBurger.getTomato());
+        System.out.println("*************************************");
         System.out.println(healthyBurger.getName());
+        System.out.println(healthyBurger.getAdditionLimit());
+        System.out.println(healthyBurger.getBasePrice());
         System.out.println(healthyBurger.getBreadRollType());
+        System.out.println(healthyBurger.getCooked());
         System.out.println(healthyBurger.getLettuce());
+        System.out.println(healthyBurger.getTomato());
         System.out.println(healthyBurger.getOnion());
         System.out.println(healthyBurger.getPickle());
-        healthyBurger.addOnion(2);
+        System.out.println("*************************************");
+        System.out.println(deluxeBurger.getName());
+        System.out.println(deluxeBurger.getAdditionLimit());
+        System.out.println(deluxeBurger.getBasePrice());
+        System.out.println(deluxeBurger.getBreadRollType());
+        System.out.println(deluxeBurger.getCooked());
+        System.out.println(deluxeBurger.getLettuce());
+        System.out.println(deluxeBurger.getTomato());
+        System.out.println(deluxeBurger.getOnion());
+        System.out.println(deluxeBurger.getPickle());
+        System.out.println("*************************************");
     }
 }
 

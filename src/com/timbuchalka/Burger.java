@@ -5,10 +5,12 @@ public class Burger {
     private String breadRollType;
     private String cooked;
     private double basePrice;
+
     private int lettuce;
     private int tomato;
     private int pickle;
     private int onion;
+
     private int additionLimit = 4;
 
     public Burger(String cooked) {
@@ -31,6 +33,14 @@ public class Burger {
         this.tomato = tomato;
         this.pickle = pickle;
         this.onion = onion;
+        this.additionLimit = additionLimit;
+    }
+
+    public int getAdditionLimit() {
+        return additionLimit;
+    }
+
+    public void setAdditionLimit(int additionLimit) {
         this.additionLimit = additionLimit;
     }
 
