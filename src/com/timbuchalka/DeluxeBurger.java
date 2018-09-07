@@ -9,4 +9,9 @@ public class DeluxeBurger extends Burger {
         this.chips = chips;
         this.drinks = drinks;
     }
+
+    @Override
+    public void checkout() {
+        super.checkout();
+    }
 }

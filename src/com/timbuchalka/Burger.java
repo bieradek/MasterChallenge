@@ -13,6 +13,8 @@ public class Burger {
 
     private int additionLimit = 4;
 
+    private int additionCounter;
+
     public Burger(String cooked) {
         this.name = "Hamburger";
         this.breadRollType = "white";
@@ -36,6 +38,18 @@ public class Burger {
         this.additionLimit = additionLimit;
     }
 
+    public void checkout() {
+        System.out.println("*************CHECKOUT*************"
+                + "\n" + "The base price of your burger is: " + getBasePrice()
+                + "\n" + "You have been entitled to " + getAdditionLimit() + "additions."
+                + "\n" + "You have added " + getAdditionCounter() + " additions.: "
+                + "\n" + "The overral price for the burger with chosen additions is: " + (getBasePrice() + 0.25 * this.additionCounter));
+    }
+
+    public int getAdditionCounter() {
+        return additionCounter;
+    }
+
     public int getAdditionLimit() {
         return additionLimit;
     }
@@ -44,24 +58,34 @@ public class Burger {
         this.additionLimit = additionLimit;
     }
 
-    public void addTomato(int tomato) {
-        this.tomato = this.tomato + tomato;
-        this.basePrice = this.basePrice + tomato * 0.25;
+    public void addTomato() {
+        if (additionCounter < additionLimit) {
+            this.tomato = this.tomato + 1;
+            additionCounter++;
+        }
     }
 
-    public void addPickle(int pickle) {
-        this.pickle = this.pickle + pickle;
-        this.basePrice = this.basePrice + pickle * 0.25;
+    public void addPickle() {
+        if (additionCounter < additionLimit) {
+            this.pickle = this.pickle + 1;
+            additionCounter++;
+        }
     }
 
-    public void addOnion(int onion) {
-        this.onion = this.onion + onion;
-        this.basePrice = this.basePrice + onion * 0.25;
+    public void addLettuce() {
+        if (additionCounter < additionLimit) {
+            this.lettuce = this.lettuce + 1;
+            additionCounter++;
+        }
     }
 
-    public void addLettuce(int lettuce) {
-        this.lettuce = this.lettuce + lettuce;
-        this.basePrice = this.basePrice + lettuce * 0.25;
+    public void addOnion() {
+        if (additionCounter < additionLimit) {
+            this.onion = this.onion + 1;
+            additionCounter++;
+        } else {
+            System.out.println("You have reached limit of additions");
+        }
     }
 
     public String getName() {
