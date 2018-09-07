@@ -54,10 +54,6 @@ public class Burger {
         return additionLimit;
     }
 
-    public void setAdditionLimit(int additionLimit) {
-        this.additionLimit = additionLimit;
-    }
-
     public void addTomato() {
         if (additionCounter < additionLimit) {
             this.tomato = this.tomato + 1;
@@ -88,67 +84,77 @@ public class Burger {
         }
     }
 
-    public String getName() {
-        return name;
+    public void addAddition(int quantity, String additionName) {
+        switch(additionName){
+
+        }
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getName() {
+        return name;
     }
 
     public String getBreadRollType() {
         return breadRollType;
     }
 
-    public void setBreadRollType(String breadRollType) {
-        this.breadRollType = breadRollType;
-    }
-
     public String getCooked() {
         return cooked;
-    }
-
-    public void setCooked(String cooked) {
-        this.cooked = cooked;
     }
 
     public double getBasePrice() {
         return basePrice;
     }
 
-    public void setBasePrice(double basePrice) {
-        this.basePrice = basePrice;
-    }
-
     public int getLettuce() {
         return lettuce;
-    }
-
-    public void setLettuce(int lettuce) {
-        this.lettuce = lettuce;
     }
 
     public int getTomato() {
         return tomato;
     }
 
-    public void setTomato(int tomato) {
-        this.tomato = tomato;
-    }
-
     public int getPickle() {
         return pickle;
-    }
-
-    public void setPickle(int pickle) {
-        this.pickle = pickle;
     }
 
     public int getOnion() {
         return onion;
     }
 
+    public void setBreadRollType(String breadRollType) {
+        this.breadRollType = breadRollType;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCooked(String cooked) {
+        this.cooked = cooked;
+    }
+
+    public void setLettuce(int lettuce) {
+        this.lettuce = lettuce;
+    }
+
+    public void setTomato(int tomato) {
+        this.tomato = tomato;
+    }
+
+    public void setPickle(int pickle) {
+        this.pickle = pickle;
+    }
+
     public void setOnion(int onion) {
         this.onion = onion;
+    }
+
+    public void setAdditionLimit(int additionLimit) {
+        this.additionLimit = additionLimit;
+    }
+
+    public void setBasePrice(double basePrice) {
+        this.basePrice = basePrice;
     }
 }
