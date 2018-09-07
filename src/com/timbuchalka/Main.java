@@ -30,18 +30,15 @@ public class Main {
         // can use a setter.
         // Also create two extra varieties of Hamburgers (subclasses) to cater for
 
-
         // a) Healthy burger (on a brown rye bread roll), plus two addition items that can be added.
         // The healthy burger can have 6 items (Additions) in total.
         // hint:  you probably want to process the two additional items in this new class (subclass of Hamburger),
         // not the base class (Hamburger), since the two additions are only appropriate for this new class
         // (in other words new burger type).
 
-
         // b) Deluxe hamburger - comes with chips and drinks as additions, but no extra additions are allowed.
         // hint:  You have to find a way to automatically add these new additions at the time the deluxe burger
         // object is created, and then prevent other additions being made.
-
 
         //  All 3 classes should have a method that can be called anytime to show the base price of the hamburger
         // plus all additionals, each showing the addition name, and addition price, and a grand/final total for the
@@ -53,7 +50,7 @@ public class Main {
         Burger healthyBurger = new HealthyBurger("medium-rare");
         Burger deluxeBurger = new DeluxeBurger("rare", "Lays", "Coca-Cola");
 
-        System.out.println("*************************************");
+        System.out.println("***********************BASE STATS***********************");
         System.out.println(baseBurger.getName());
         System.out.println(baseBurger.getAdditionLimit());
         System.out.println(baseBurger.getBasePrice());
@@ -64,80 +61,7 @@ public class Main {
         System.out.println(baseBurger.getPickle());
         System.out.println(baseBurger.getTomato());
         System.out.println("***********************ADDITIONS***********************");
-        baseBurger.addLettuce();
-        baseBurger.addOnion();
-        baseBurger.addPickle();
-        baseBurger.addTomato();
-        System.out.println(baseBurger.getName());
-        System.out.println(baseBurger.getAdditionLimit());
-        System.out.println(baseBurger.getBasePrice());
-        System.out.println(baseBurger.getBreadRollType());
-        System.out.println(baseBurger.getCooked());
-        System.out.println(baseBurger.getLettuce());
-        System.out.println(baseBurger.getOnion());
-        System.out.println(baseBurger.getPickle());
-        System.out.println(baseBurger.getTomato());
-        baseBurger.addOnion();
+        baseBurger.addAddition(1,"onion");
         baseBurger.checkout();
-        deluxeBurger.addOnion();
-//        System.out.println("*************************************");
-//        System.out.println(healthyBurger.getName());
-//        System.out.println(healthyBurger.getAdditionLimit());
-//        System.out.println(healthyBurger.getBasePrice());
-//        System.out.println(healthyBurger.getBreadRollType());
-//        System.out.println(healthyBurger.getCooked());
-//        System.out.println(healthyBurger.getLettuce());
-//        System.out.println(healthyBurger.getTomato());
-//        System.out.println(healthyBurger.getOnion());
-//        System.out.println(healthyBurger.getPickle());
-//        System.out.println("*************************************");
-//        System.out.println(deluxeBurger.getName());
-//        System.out.println(deluxeBurger.getAdditionLimit());
-//        System.out.println(deluxeBurger.getBasePrice());
-//        System.out.println(deluxeBurger.getBreadRollType());
-//        System.out.println(deluxeBurger.getCooked());
-//        System.out.println(deluxeBurger.getLettuce());
-//        System.out.println(deluxeBurger.getTomato());
-//        System.out.println(deluxeBurger.getOnion());
-//        System.out.println(deluxeBurger.getPickle());
-//        System.out.println("*************************************");
     }
 }
-
-//        System.out.println("Welcome to Bills Burgers. Please tell us your name. We will call you once your meal is ready");
-//        Scanner scanner = new Scanner(System.in);
-//        Customer customer = new Customer(((int) (Math.random() * 100) + 1), scanner.nextLine());
-//        System.out.println("********************BILLS BURGERS MENU********************"
-//                + "\n" + "1.Hamburger"
-//                + "\n" + "2.Healthy Burger"
-//                + "\n" + "3.Deluxe Hamburger"
-//                + "\n" + "Please enter the number to view details of the burger");
-//        switch (scanner.nextInt()) {
-//            case 1:
-//                Burger burger = new Burger("well-done");
-//                System.out.println("The " + burger.getName() + " has " + burger.getBreadRollType() + " type of bread roll and" +
-//                        "\n" + "the meat is cooked " + burger.getCooked() + " by default." +
-//                        "\n" + "The burger has a base price of " + burger.getBasePrice() + "$ dollars" +
-//                        "\n" + "You can have up to 4 additions. Each addition costs 1$. In order to view additions type 'ADDITIONS'");
-//                while (scanner.hasNext("ADDITIONS")) {
-//                    System.out.println("The available additions for your order are: " +
-//                            "\n" + "1. Lettuce" +
-//                            "\n" + "2. Tomato" +
-//                            "\n" + "3. Onion" +
-//                            "\n" + "4. Pickle");
-//                }
-//                break;
-//            case 2:
-//                HealthyBurger healthyBurger = new HealthyBurger("well-done");
-//                System.out.println("The " + healthyBurger.getName() + " has " + healthyBurger.getBreadRollType() + " type of bread roll and" +
-//                        "\n" + "the meat is cooked " + healthyBurger.getCooked() + " by default." +
-//                        "\n" + "The burger has a base price of " + healthyBurger.getBasePrice());
-//                break;
-//            case 3:
-//                DeluxeBurger deluxeBurger = new DeluxeBurger("well-done");
-//                System.out.println("The " + deluxeBurger.getName() + " has " + deluxeBurger.getBreadRollType() + " type of bread roll and" +
-//                        "\n" + "the meat is cooked " + deluxeBurger.getCooked() + " by default." +
-//                        "\n" + "The burger has a base price of " + deluxeBurger.getBasePrice());
-//            default:
-//                System.out.println("Incorrect number. Please provide valid input.");
-//        }

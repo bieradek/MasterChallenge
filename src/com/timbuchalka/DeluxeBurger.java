@@ -9,4 +9,9 @@ public class DeluxeBurger extends Burger {
         this.chips = chips;
         this.drinks = drinks;
     }
+
+    @Override
+    public void addAddition(int quantity, String additionName) {
+        System.out.println("There are no additions allowed for your order");
+    }
 }
