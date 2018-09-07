@@ -49,19 +49,31 @@ public class Main {
         Burger baseBurger = new Burger("well-done");
         Burger healthyBurger = new HealthyBurger("medium-rare");
         Burger deluxeBurger = new DeluxeBurger("rare", "Lays", "Coca-Cola");
+        Burger anotherDeluxe = new DeluxeBurger("rare", "Cheetos", "Pepsi");
 
-        System.out.println("***********************BASE STATS***********************");
-        System.out.println(baseBurger.getName());
-        System.out.println(baseBurger.getAdditionLimit());
-        System.out.println(baseBurger.getBasePrice());
-        System.out.println(baseBurger.getBreadRollType());
-        System.out.println(baseBurger.getCooked());
-        System.out.println(baseBurger.getLettuce());
-        System.out.println(baseBurger.getOnion());
-        System.out.println(baseBurger.getPickle());
-        System.out.println(baseBurger.getTomato());
-        System.out.println("***********************ADDITIONS***********************");
-        baseBurger.addAddition(1,"onion");
-        baseBurger.checkout();
+//        System.out.println("***********************BASE STATS***********************");
+//        System.out.println(baseBurger.getName());
+//        System.out.println(baseBurger.getAdditionLimit());
+//        System.out.println(baseBurger.getBasePrice());
+//        System.out.println(baseBurger.getBreadRollType());
+//        System.out.println(baseBurger.getCooked());
+//        System.out.println(baseBurger.getLettuce());
+//        System.out.println(baseBurger.getOnion());
+//        System.out.println(baseBurger.getPickle());
+//        System.out.println(baseBurger.getTomato());
+//        System.out.println("***********************ADDITIONS***********************");
+//        baseBurger.addAddition(1, "onion");
+//        baseBurger.checkout();
+//        deluxeBurger.checkout();
+//        anotherDeluxe.setName("Another DELUXE");
+//        anotherDeluxe.checkout();
+//        System.out.println(healthyBurger.getAdditionCounter());
+        healthyBurger.addAddition(3, "lettuce");
+        System.out.println(healthyBurger.getAdditionCounter());
+        healthyBurger.addAddition(2, "onion");
+        healthyBurger.addAddition(1, "onion");
+        System.out.println(healthyBurger.getAdditionCounter());
+        deluxeBurger.addAddition(1, "onion");
+        System.out.println(baseBurger.getAdditionCounter());
     }
 }

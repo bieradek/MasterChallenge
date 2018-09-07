@@ -12,7 +12,7 @@ public class Burger {
     private int onion;
 
     private int additionLimit = 4;
-    private int additionCounter;
+    private int additionCounter = 0;
 
     public Burger(String cooked) {
         this.name = "Hamburger";
@@ -39,7 +39,7 @@ public class Burger {
 
     public void checkout() {
         System.out.println("*************CHECKOUT*************"
-                + "\n" + "The base price of your burger is: " + getBasePrice()
+                + "\n" + "The base price of your " + getName() + " burger is: " + getBasePrice()
                 + "\n" + "You have been entitled to " + getAdditionLimit() + " additions."
                 + "\n" + "You have still " + (getAdditionLimit() - getAdditionCounter()) + " additions left."
                 + "\n" + "You have added " + getAdditionCounter() + " additions.: "
@@ -47,30 +47,34 @@ public class Burger {
     }
 
     public void addAddition(int quantity, String additionName) {
-        if (additionCounter < additionLimit) {
+        if ((additionCounter < additionLimit) && (quantity <= additionLimit)) {
             switch (additionName) {
                 case "onion":
                     this.onion += quantity;
-                    additionCounter++;
+                    additionCounter += quantity;
+                    System.out.println(quantity + " " + additionName + " added");
                     break;
                 case "pickle":
                     this.pickle += quantity;
-                    additionCounter++;
+                    additionCounter += quantity;
+                    System.out.println(quantity + " " + additionName + " added");
                     break;
                 case "tomato":
                     this.tomato += quantity;
-                    additionCounter++;
+                    additionCounter += quantity;
+                    System.out.println(quantity + " " + additionName + " added");
                     break;
                 case "lettuce":
                     this.lettuce += quantity;
-                    additionCounter++;
+                    additionCounter += quantity;
+                    System.out.println(quantity + " " + additionName + " added");
                     break;
                 default:
-                    System.out.println("Unknown type");
+                    System.out.println("Unknown type. Nothing has been added");
                     break;
             }
         } else {
-            System.out.println("You have reached limit of additions");
+            System.out.println("You cannot add more additions");
         }
     }
 
@@ -112,5 +116,9 @@ public class Burger {
 
     public int getOnion() {
         return onion;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -14,4 +14,9 @@ public class DeluxeBurger extends Burger {
     public void addAddition(int quantity, String additionName) {
         System.out.println("There are no additions allowed for your order");
     }
+
+    @Override
+    public void checkout() {
+        System.out.println("The overall price for your " + getName() + " burger is 10$");
+    }
 }
